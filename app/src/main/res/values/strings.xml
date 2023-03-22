@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">finalproject</string>
+    <string name="Meter">meter</string>
+    <string name="power_control">power control</string>
+    <string name="settings">settings</string>
+    <string name="view_result">view reult</string>
+</resources>

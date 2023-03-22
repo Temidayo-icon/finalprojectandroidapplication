@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimaryLight">
+
+    <!--Navigation Menu Items - IDs, Icons and Itemtitles of each Activity-->
+    <item
+        android:id="@+id/power_control"
+        android:title="@string/power_control"
+        android:icon="@drawable/ic_contol"
+        android:iconTint="@color/colorAccent"/>
+    <item
+        android:id="@+id/settings"
+        android:title="@string/settings"
+        android:icon="@drawable/ic_settings"
+        android:iconTint="@color/colorAccent"/>
+    <item
+        android:id="@+id/view_result"
+        android:title="@string/view_result"
+        android:icon="@drawable/ic_view_result"
+        android:iconTint="@color/colorAccent"/>
+
+</menu>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/drawerLayout">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/TextWhiteColor"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp"
+        android:text="@string/Meter">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Menu Bar -->
+    <ImageButton
+        android:id="@+id/menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_menu"/>
+
+    <!-- Refresh Button -->
+    <ImageButton
+        android:id="@+id/refresh_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_refresh"/>
+
+    <!-- Energy Monitor Title -->
+    <TextView
+        android:id="@+id/energy_monitor_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Energy Monitor"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/menu_button"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Available Kilowatt TextView -->
+    <TextView
+        android:id="@+id/available_kilowatt_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available Kilowatt"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/energy_monitor_title"
+        android:layout_marginTop="20dp"/>
+
+    <!-- KWH Value TextView -->
+    <TextView
+        android:id="@+id/kwh_value_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KWH Value"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/available_kilowatt_textview"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Instantaneous and Cumulative Buttons -->
+    <LinearLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/kwh_value_textview"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/instantaneous_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instantaneous"/>
+
+        <Button
+            android:id="@+id/cumulative_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Cumulative"/>
+
+    </LinearLayout>
+
+    <!-- Graph View -->
+    <View
+        android:id="@+id/graph_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/buttons_layout"
+        android:background="#FFFFFF"/>
+
+    <!-- Current Power Consumption TextView -->
+    <TextView
+        android:id="@+id/current_power_consumption_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Power Consumption"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/graph_view"
+        android:layout_marginTop="20dp"/>
+
+        <!-- Power Used Today TextView -->
+    <TextView
+    android:id="@+id/power_used_today_textview"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Power Used Today"
+    android:textSize="20sp"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/current_power_consumption_textview"
+    android:layout_marginTop="20dp"/>
+
+    <!-- Total Consumption TextView -->
+    <TextView
+        android:id="@+id/total_consumption_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Consumption"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/power_used_today_textview"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Total Power Consumption TextView -->
+    <TextView
+        android:id="@+id/total_power_consumption_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Power Consumption"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/total_consumption_textview"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_menu"
+        app:headerLayout="@layout/header"
+        app:itemIconTint="@color/colorAccent"/>
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+

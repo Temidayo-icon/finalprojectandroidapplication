@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.finalproject">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Finalproject"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="31">
+
+
+        <!--Splash Screen-->
+        <activity
+            android:name="com.example.finalproject.Splash_Screen"
+            android:label="@string/app_name"
+            android:exported="true">
+        <intent-filter>
+        <action
+            android:name="android.intent.action.MAIN"
+            android:label="@string/app_name" />
+
+        <!--Main Launcher Activity-->
+        <category
+            android:name="android.intent.category.LAUNCHER"
+            android:label="@string/app_name" />
+        </intent-filter>
+        </activity>
+
+        <!--Drawer Tabs Activities-->
+
+        <activity
+            android:name=".Drawer_activites.power_control"
+            android:label="power control"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".Drawer_activites.settings"
+            android:label="settings"
+            android:launchMode="singleTask"/>
+
+
+        <activity
+            android:name=".MainActivity"
+            android:label="View Result"
+            android:launchMode="singleTask"/>
+
+    </application>
+
+</manifest>
